@@ -15,6 +15,7 @@ Daniel Villar - Jose Amenabar - Mason Gao - Matthew
 <form action="#">
       <label for="lang">City</label>
       <select name="City" id="lang">
+        <option value="Select">Select</option>
         <option value="New York">New York</option>
         <option value="London">London</option>
         <option value="Madrid">Madrid</option>
@@ -26,15 +27,7 @@ Daniel Villar - Jose Amenabar - Mason Gao - Matthew
       </select>
       <input type="submit" value="Search" />
 </form>
-
-
-<!--<label style="color:royalblue; font-size:180px"><center>30ºC</center></label>-->
-<label style="color:royalblue; font-size:180px"><center>{{ temperature }}ºC</center></label>
-
-<!--<label style="color:royalblue; font-size:180px"><center>{{ weather }}</center></label>
--->
-
+<label style="color:royalblue; font-size:140px"><center>{{ city_bar }}: {{ temperature }}ºC</center></label>
 <center>{{ time_of_day }}</center>
-
 </body>
 </html>
