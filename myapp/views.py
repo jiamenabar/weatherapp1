@@ -13,7 +13,7 @@ def home(request):
     cities = WeatherApp.objects.values_list('city', flat=True).distinct()
     data['cities'] = cities
 
-    city = request.GET.get('city')
+    city = request.GET.get('City')
     if city:
         temperature = WeatherApp.objects.get(city=city).weather
         data['temperature'] = temperature
