@@ -31,9 +31,9 @@ Daniel Villar - Jose Amenabar - Mason Gao - Matthew
 
 <form action="#">
       <label for="lang">City</label>
-      <select name="city" id="lang">
-        {% for c in cities %}
-            <option value="{{ c }}">{{ c }}</option>
+      <select name="City" id="lang">
+        {% for weather in weather_list %}
+            <option value="{{ weather.city }} {{ weather.country }}">{{ weather.city }} {{ weather.country }}</option>
         {% endfor %}
       </select>
       <input type="submit" value="Search" />

@@ -10,12 +10,13 @@ def home(request):
     data["time_of_day"] = time
     data['xy'] = xy
 
-    cities = WeatherApp.objects.values_list('city', flat=True).distinct()
-    data['cities'] = cities
+    weather_list = WeatherApp.objects.all()
+    data['weather_list'] = weather_list
 
     city = request.GET.get('City')
     if city:
-        temperature = WeatherApp.objects.get(city=city).weather
+        city, country = city.split()
+        temperature = WeatherApp.objects.get(city=city, country=country).weather
         data['temperature'] = temperature
     else:
         data['temperature'] = None
