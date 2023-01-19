@@ -10,4 +10,4 @@ def home(request):
     data["time_of_day"] = time
     data['xy'] = xy
 
-    return render(request, "weather.html", context=data)
+    return render(request, "home.html", context=data)
