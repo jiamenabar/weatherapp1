@@ -5,8 +5,7 @@ from myapp.models import WeatherApp
 
 class WeatherAdmin(admin.ModelAdmin):
     fields = ('city','country','weather')
-    model = WeatherApp
-    extra = 0
+
 admin.site.register(WeatherApp,WeatherAdmin)
 
 from django.contrib.auth.models import User
