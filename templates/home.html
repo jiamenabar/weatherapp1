@@ -12,7 +12,6 @@
 <br>
 Daniel Villar - Jose Amenabar - Mason Gao - Matthew
 <br><br><br>
-<!--
 <form action="#">
       <label for="lang">City</label>
       <select name="City" id="lang">
@@ -27,41 +26,7 @@ Daniel Villar - Jose Amenabar - Mason Gao - Matthew
       </select>
       <input type="submit" value="Search" />
 </form>
--->
 
-<form action="#">
-      <label for="lang">City</label>
-      <select name="City" id="lang">
-        {% for weather in weather_list %}
-            <option value="{{ weather.city }} {{ weather.country }}">{{ weather.city }} {{ weather.country }}</option>
-        {% endfor %}
-      </select>
-      <input type="submit" value="Search" />
-</form>
-
-
-<!-- //This code is to get the data from a database
-
-<form action="#">
-      <label for="lang">City</label>
-      <select name="City" id="lang"></select>
-      <input type="submit" value="Search" />
-</form>
-
-<script>
-    // retrieve list of cities from database
-    let cities = retrieveCitiesFromDatabase();
-
-    // populate the select element with options
-    let select = document.getElementById("lang");
-    for (let i = 0; i < cities.length; i++) {
-        let option = document.createElement("option");
-        option.value = cities[i];
-        option.text = cities[i];
-        select.appendChild(option);
-    }
-</script>
--->
 
 <!--<label style="color:royalblue; font-size:180px"><center>30ºC</center></label>-->
 <label style="color:royalblue; font-size:180px"><center>{{ temperature }}ºC</center></label>
