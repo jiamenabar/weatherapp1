@@ -32,8 +32,8 @@ Daniel Villar - Jose Amenabar - Mason Gao - Matthew
 <form action="#">
       <label for="lang">City</label>
       <select name="city" id="lang">
-        {% for city in cities %}
-            <option value="{{ city }}">{{ city }}</option>
+        {% for c in cities %}
+            <option value="{{ c }}">{{ c }}</option>
         {% endfor %}
       </select>
       <input type="submit" value="Search" />
