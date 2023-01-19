@@ -9,6 +9,7 @@ def home(request):
     xy = 1000
     data["time_of_day"] = time
     data['xy'] = xy
+
     cities = WeatherApp.objects.values_list('city', flat=True).distinct()
     data['cities'] = cities
 
