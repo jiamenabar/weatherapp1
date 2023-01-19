@@ -10,20 +10,15 @@ def home(request):
     data["time_of_day"] = time
     data['xy'] = xy
 
-    city_bar = request.GET.get('City')
-    data['city_bar']=city_bar
+    choice = request.GET.get('City')
+    data['city_choice']=choice
 
-    if city_bar:
-        weather_bar = WeatherApp.objects.get(city=city_bar)
+    if choice:
+        weather_bar = WeatherApp.objects.get(city=choice)
         data['temperature'] = weather_bar.weather
+        data['country'] = weather_bar.country
     else:
         data['temperature'] = None
+        data['country'] = None
 
-    ''''
-    if city:
-        weather = WeatherApp.objects.get(city=city)
-        data['temperature'] = weather.weather
-    else:
-        data['temperature'] = None
-'''
     return render(request, "home.html", context=data)
