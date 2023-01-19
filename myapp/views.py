@@ -1,3 +1,4 @@
+from django.contrib.sites import requests
 from django.shortcuts import render
 from myapp.models import WeatherApp
 from .models import City
