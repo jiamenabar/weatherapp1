@@ -12,6 +12,7 @@
 <br>
 Daniel Villar - Jose Amenabar - Mason Gao - Matthew
 <br><br><br>
+<!--
 <form action="#">
       <label for="lang">City</label>
       <select name="City" id="lang">
@@ -26,6 +27,19 @@ Daniel Villar - Jose Amenabar - Mason Gao - Matthew
       </select>
       <input type="submit" value="Search" />
 </form>
+-->
+
+<form action="#">
+      <label for="lang">City</label>
+      <select name="City" id="lang">
+        {% for city in cities %}
+            <option value="{{ city }}">{{ city }}</option>
+        {% endfor %}
+      </select>
+      <input type="submit" value="Search" />
+</form>
+
+
 <!-- //This code is to get the data from a database
 
 <form action="#">
