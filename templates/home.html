@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src = '{% static "myapp/weather.png" %}' width="150" height="150">
+<br>
+<span style = "color:cornflowerblue"> WEATHER WEB APP </span>
+<br>
+Daniel Villar - Jose Amenabar - Mason Gao - Matthew
+<br><br><br>
+<form action="#">
+      <label for="lang">City</label>
+      <select name="City" id="lang">
+        <option value="New York">New York</option>
+        <option value="London">London</option>
+        <option value="San Francisco">San Francisco</option>
+        <option value="Hong Kong">Hong Kong</option>
+        <option value="Seul">Seul</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Brasilia">Brasilia</option>
+      </select>
+      <input type="submit" value="Search" />
+</form>
+<!-- //This code is to get the data from a database
+
+<form action="#">
+      <label for="lang">City</label>
+      <select name="City" id="lang"></select>
+      <input type="submit" value="Search" />
+</form>
+
+<script>
+    // retrieve list of cities from database
+    let cities = retrieveCitiesFromDatabase();
+
+    // populate the select element with options
+    let select = document.getElementById("lang");
+    for (let i = 0; i < cities.length; i++) {
+        let option = document.createElement("option");
+        option.value = cities[i];
+        option.text = cities[i];
+        select.appendChild(option);
+    }
+</script>
+-->
+
+<label style="color:royalblue; font-size:180px"><center>30ºC</center></label>
+<!--//This code replace the "30ºC" to connect it to the database
+<label style="color:royalblue; font-size:180px"><center>{{ weather }}</center></label>
+-->
+
+<center>{{ time_of_day }}</center>
+
+</body>
+</html>
