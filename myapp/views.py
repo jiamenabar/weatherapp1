@@ -10,15 +10,5 @@ def home(request):
     data["time_of_day"] = time
     data['xy'] = xy
 
-    weather_list = WeatherApp.objects.all()
-    data['weather_list'] = weather_list
-
-    city = request.GET.get('City')
-    if city:
-        city, country = city.split()
-        temperature = WeatherApp.objects.get(city=city, country=country).weather
-        data['temperature'] = temperature
-    else:
-        data['temperature'] = None
 
     return render(request, "home.html", context=data)
