@@ -9,5 +9,11 @@ def home(request):
     xy = 1000
     data["time_of_day"] = time
     data['xy'] = xy
+    city = request.GET.get('City')
+    if city:
+        temperature = WeatherApp.objects.get(city=city).temperature
+        data['temperature'] = temperature
+    else:
+        data['temperature'] = None
 
     return render(request, "home.html", context=data)
