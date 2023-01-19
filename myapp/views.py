@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from myapp.models import WeatherApp
-import requests
 from .models import City
 from .forms import CityForm
 # Create your views here.
