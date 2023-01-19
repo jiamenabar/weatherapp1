@@ -14,11 +14,9 @@ def home(request):
     data['city_choice']=choice
 
     if choice:
-        weather_bar = WeatherApp.objects.filter(city=choice)
-        data['temperature'] = WeatherApp.objects.filter(city=choice).values('weather')
-        data['city'] = WeatherApp.objects.filter(city=choice).values('city')
+        weather_bar = WeatherApp.objects.get(city=choice)
+        data['temperature'] = weather_bar.weather
     else:
         data['temperature'] = None
-        data['country'] = None
 
     return render(request, "home.html", context=data)
