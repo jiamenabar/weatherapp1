@@ -54,8 +54,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'weatherapp1.urls'
 
-AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
