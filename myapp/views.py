@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from myapp.models import WeatherApp
 # Create your views here.
 
 def home(request):
